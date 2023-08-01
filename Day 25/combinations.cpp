@@ -1,0 +1,25 @@
+class Solution {
+public:
+
+    void backtrack(int left, int n, int k, vector<int>& curr, vector<vector<int>>& res) {
+
+
+        if (k == 0) {
+            res.push_back(curr);
+            return;
+        }
+
+        for (int i = left; i <= n; ++i)
+        {
+            curr.push_back(i);
+            backtrack(i + 1, n, k - 1, curr, res);
+            curr.pop_back();
+        }
+    }
+    vector<vector<int>> combine(int n, int k) {
+        vector<vector<int>> res;
+        vector<int> curr;
+        backtrack(1, n, k, curr, res);
+        return res;
+    }
+};
