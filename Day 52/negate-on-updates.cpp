@@ -1,3 +1,10 @@
+
+/*
+Given an array of integers and a list of updates, 
+write a function that applies the updates one by one in the order given and returns the resulting array. 
+Each update is a tuple (start_index, end_index) where each index is 1-based and  inclusive).
+*/
+
 #include <iostream>
 #include <vector>
 
